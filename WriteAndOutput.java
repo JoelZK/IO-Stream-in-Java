@@ -2,14 +2,15 @@ import java.io.*;
 
 class WriteAndOutput {
 	public static void main(String[] args) throws Exception{
-		String filePath="/Users/JOEL/Downloads/Room Rent/address.txt";
-		String copyTo="/Users/JOEL/Downloads/address.txt";
+		String filePath="IO/Test.jpg";
+		String copyTo="IO/Test_copy.jpg";
 		//By using Write stream;
 		//copyFileByFileReadWrite(filePath, copyTo);
 		//By using Output stream;
 		copyFileByFileInputOutput(filePath, copyTo);
 	}
-	
+		
+	//FileReader and FileWriter unable to use to copy a un-Text file(Text File access only)	
 	static void copyFileByFileReadWrite(String filePath, String copyTo) throws Exception{
 		FileReader fReader=new FileReader(filePath);
 		FileWriter fWriter=new FileWriter(copyTo);
@@ -24,7 +25,9 @@ class WriteAndOutput {
 		fReader.close();
 		fWriter.close();
 	}
+	
 		
+	//FileInputStream and FileOutputStream are able to use on both Text files and Binary files(But 2-Byte code file not support)	
 	static void copyFileByFileInputOutput(String filePath, String copyTo) throws Exception{
 		FileInputStream fInputStream=new FileInputStream(filePath);
 		FileOutputStream fOutputStream=new FileOutputStream(copyTo);
