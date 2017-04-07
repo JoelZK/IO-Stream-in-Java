@@ -22,7 +22,7 @@ class BufferedInputOutputStream {
 		System.out.println("Copy Progress Started");
 		int temp=bis.read(buffer);
 		while(temp>=0){
-			//Buffered output stream write() method with three arguesments which are buffer(byte[]), offset(int) and the length of reading each time(int);
+			//Buffered output stream write() method with three arguesments which are buffer(byte[]), offset(int) and the data(ASCII int);
 			bos.write(buffer, 0, temp);
 			temp=bis.read(buffer);
 		}
