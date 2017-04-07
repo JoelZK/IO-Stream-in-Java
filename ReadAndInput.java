@@ -6,8 +6,8 @@ input, output are byte stream.
 
 NOTE:
 =================================
-read, write are using for text files accessing(Chinese/Other 4-byte code support);
-input, output are using for binary file accessing(Not support the Chinese/Other 4-byte code).
+read, write are using for text files accessing(read 2 byte in one time, Chinese/Other 2-byte code support);
+input, output are using for binary file accessing(1 byte in one time. Not support the Chinese/Other 2-byte code).
 */
 
 import java.io.*;
