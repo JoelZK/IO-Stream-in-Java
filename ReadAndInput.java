@@ -15,7 +15,7 @@ import java.io.*;
 class ReadAndInput {
 	public static void main(String[] args) throws Exception{
 		//Input the full path of the file location
-		String filePath="/Users/JOEL/Downloads/Room Rent/address.txt";
+		String filePath="IO/test.txt";
 		//By using file read
 		readFileByFileReader(filePath);
 		//By using file input stream
