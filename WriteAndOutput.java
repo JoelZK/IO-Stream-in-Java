@@ -10,7 +10,7 @@ class WriteAndOutput {
 		copyFileByFileInputOutput(filePath, copyTo);
 	}
 		
-	//FileReader and FileWriter unable to use to copy a un-Text file(Text File access only)	
+//FileReader and FileWriter unable to use to copy a un-Text file(Text File access only)	
 	static void copyFileByFileReadWrite(String filePath, String copyTo) throws Exception{
 		FileReader fReader=new FileReader(filePath);
 		FileWriter fWriter=new FileWriter(copyTo);
@@ -27,7 +27,7 @@ class WriteAndOutput {
 	}
 	
 		
-	//FileInputStream and FileOutputStream are able to use on both Text files and Binary files(But 2-Byte code file not support)	
+//FileInputStream and FileOutputStream are able to use on both Text files and Binary files(But 2-Byte code file not support)	
 	static void copyFileByFileInputOutput(String filePath, String copyTo) throws Exception{
 		FileInputStream fInputStream=new FileInputStream(filePath);
 		FileOutputStream fOutputStream=new FileOutputStream(copyTo);
