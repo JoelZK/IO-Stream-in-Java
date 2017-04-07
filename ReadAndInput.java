@@ -31,7 +31,7 @@ class ReadAndInput {
 		
 		System.out.println("File content by using FileReader:\n=====================================");
 		//Keep reading the charaters in the file until the ASCII value less than 0(ASCII defined from 0);
-		while(temp>0){
+		while(temp>=0){
 			System.out.print((char)temp);
 			temp=fReader.read();
 		}
@@ -45,7 +45,7 @@ class ReadAndInput {
 		
 		int temp=fInputStream.read();
 		System.out.println("File content by using FileInputStream:\n=====================================");
-		while (temp>0) {
+		while (temp>=0) {
 			System.out.print((char)temp);
 			temp=fInputStream.read();
 		}
