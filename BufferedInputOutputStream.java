@@ -22,8 +22,8 @@ class BufferedInputOutputStream {
 		System.out.println("Copy Progress Started");
 		int temp=bis.read(buffer);
 		while(temp>=0){
-			//Buffered output stream write() method with three arguesments which are buffer(byte[]), offset(int) and the data(ASCII int);
-			bos.write(buffer, 0, temp);
+			//Buffered output stream write() method with three arguesments which are buffer(byte[]), offset(int) and the length of reading each time(int);
+			bos.write(buffer, 0, temp);	//Using the length of BufferedInputStream read() method result is for avoid the error if last data need to write is not enough to the size of buffer.
 			temp=bis.read(buffer);
 		}
 		bos.flush();
